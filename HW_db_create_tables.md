@@ -13,13 +13,13 @@ tracks { id, **album_id (foreign key)**, number, name, playtime, lyrics }
 
 ***
 
-CREATE TABLE IF NOT EXISTS artists (  
-             id SERIAL PRIMARY KEY,  
-             first_name VARCHAR(64) NOT NULL,  
-             last_name VARCHAR(64) NOT NULL,  
-             stage_name VARCHAR(64) NOT NULL,  
-             birthday DATE NOT NULL  
-);  
+    CREATE TABLE IF NOT EXISTS artists (  
+                 id SERIAL PRIMARY KEY,  
+                 first_name VARCHAR(64) NOT NULL,  
+                 last_name VARCHAR(64) NOT NULL,  
+                 stage_name VARCHAR(64) NOT NULL,  
+                 birthday DATE NOT NULL  
+    );  
 
 ***
 
