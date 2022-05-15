@@ -9,7 +9,7 @@ albums { id, name, **artist_id (foreign key)**, release_date, **genre_id (foreig
 tracks { id, **album_id (foreign key)**, number, name, playtime, lyrics }
 
 
-### SQL commands to create main tables
+### SQL commands to create main relations
 
 ***
 
