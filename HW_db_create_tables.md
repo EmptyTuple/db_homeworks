@@ -19,11 +19,15 @@ CREATE TABLE IF NOT EXISTS artists (
              birthday DATE NOT NULL  
 );  
 
+***
+
 CREATE TABLE IF NOT EXISTS genres (  
             id SERIAL PRIMARY KEY,  
             name VARCHAR(64) NOT NULL,  
             description TEXT  
 );  
+
+***
 
 CREATE TABLE IF NOT EXISTS albums (  
              id SERIAL PRIMARY KEY,  
@@ -33,6 +37,8 @@ CREATE TABLE IF NOT EXISTS albums (
              genre_id INTEGER REFERENCES genres(id),  
              picture_url VARCHAR(255)  
 );  
+
+***
 
 CREATE TABLE IF NOT EXISTS tracks (  
              id SERIAL PRIMARY KEY,  
