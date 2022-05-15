@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS artists (
              first_name VARCHAR(64) NOT NULL,  
              last_name VARCHAR(64) NOT NULL,  
              stage_name VARCHAR(64) NOT NULL,  
-             birtday DATE NOT NULL  
+             birthday DATE NOT NULL  
 );  
 
 CREATE TABLE IF NOT EXISTS genres (  
