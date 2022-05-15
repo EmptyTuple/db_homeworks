@@ -11,6 +11,8 @@ tracks { id, **album_id (foreign key)**, number, name, playtime, lyrics }
 
 ### SQL commands to create main tables
 
+***
+
 CREATE TABLE IF NOT EXISTS artists (  
              id SERIAL PRIMARY KEY,  
              first_name VARCHAR(64) NOT NULL,  
