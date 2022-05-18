@@ -26,7 +26,7 @@
     
     CREATE TABLE IF NOT EXISTS genres(  
         genre_id SERIAL PRIMARY KEY,  
-        genre_name VARCHAR(64),  
+        genre_name VARCHAR(64) NOT NULL,  
         description TEXT);  
 
 ***
@@ -40,8 +40,8 @@
 
     CREATE TABLE IF NOT EXISTS albums(  
         album_id SERIAL PRIMARY KEY,  
-        album_name VARCHAR(64),  
-        release_year INTEGER);  
+        album_name VARCHAR(64) NOT NULL,   
+        release_year INTEGER NOT NULL);  
 
 ***
 
@@ -55,8 +55,22 @@
     CREATE TABLE IF NOT EXISTS tracks(  
         track_id SERIAL PRIMARY KEY,  
         album_id INTEGER REFERENCES albums(album_id),  
-        track_name VARCHAR(64),  
-        track_number SMALLINT,  
-        playtime INTERVAL MINUTE TO SECOND);  
+        track_name VARCHAR(64) NOT NULL,   
+        track_number SMALLINT NOT NULL,  
+        playtime INTERVAL MINUTE TO SECOND NOT NULL);  
+
+***
+
+    CREATE TABLE IF NOT EXISTS collections(  
+        collection_id SERIAL PRIMARY KEY,  
+        collection_name VARCHAR(64) NOT NULL,  
+        release_year INTEGER);  
+
+***
+
+    CREATE TABLE IF NOT EXISTS tracks_collections(  
+        collection_id INTEGER REFERENCES collections(collection_id),  
+        track_id INTEGER REFERENCES tracks(track_id),  
+        CONSTRAINT ct PRIMARY KEY (collection_id, track_id));  
 
 ***
