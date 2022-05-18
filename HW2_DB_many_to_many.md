@@ -14,8 +14,13 @@
 
     CREATE TABLE IF NOT EXISTS artists_info(  
 	    artist_id INTEGER PRIMARY KEY REFERENCES artists(artist_id),  
-	    birtday DATE,  
+	    birthday DATE,  
 	    description TEXT,  
 	    url_page VARCHAR(255));  
     
+    CREATE TABLE IF NOT EXISTS genres(  
+        genre_id SERIAL PRIMARY KEY,  
+        genre_name VARCHAR(64),  
+        description TEXT);  
+
     
