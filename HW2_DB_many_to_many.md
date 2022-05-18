@@ -5,3 +5,10 @@
 
 
 ### SQL commands to create main relations
+
+CREATE TABLE IF NOT EXISTS artists(
+	artist_id SERIAL PRIMARY KEY,
+	first_name VARCHAR(64) NOT NULL,
+	last_name VARCHAR(64) NOT NULL,
+	stage_name VARCHAR(64));
+
