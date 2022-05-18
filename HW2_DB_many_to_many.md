@@ -38,3 +38,9 @@
 
 ***
 
+    CREATE TABLE IF NOT EXISTS albums(  
+        album_id SERIAL PRIMARY KEY,  
+        album_name VARCHAR(64),  
+        release_year INTEGER);  
+
+***
