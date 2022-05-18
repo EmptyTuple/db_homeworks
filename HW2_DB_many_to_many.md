@@ -12,3 +12,10 @@
         last_name VARCHAR(64) NOT NULL,  
         stage_name VARCHAR(64));  
 
+    CREATE TABLE IF NOT EXISTS artists_info(  
+	    artist_id INTEGER PRIMARY KEY REFERENCES artists(artist_id),  
+	    birtday DATE,  
+	    description TEXT,  
+	    url_page VARCHAR(255));  
+    
+    
