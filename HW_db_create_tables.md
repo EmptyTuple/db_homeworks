@@ -15,6 +15,7 @@ tracks { id, **album_id (foreign key)**, number, name, playtime, lyrics }
 
     CREATE TABLE IF NOT EXISTS artists (  
                  id SERIAL PRIMARY KEY,  
+                 genre_id INTEGER REFERENCES genres(id),  
                  first_name VARCHAR(64) NOT NULL,  
                  last_name VARCHAR(64) NOT NULL,  
                  stage_name VARCHAR(64) NOT NULL,  
@@ -35,8 +36,7 @@ tracks { id, **album_id (foreign key)**, number, name, playtime, lyrics }
                  id SERIAL PRIMARY KEY,  
                  name VARCHAR(64) NOT NULL,  
                  artist_id INTEGER REFERENCES artists(id),  
-                 release_date DATE NOT NULL,  
-                 genre_id INTEGER REFERENCES genres(id),  
+                 release_date DATE NOT NULL,    
                  picture_url VARCHAR(255)  
     );  
 
