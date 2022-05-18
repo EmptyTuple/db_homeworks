@@ -31,4 +31,10 @@
 
 ***
 
-    
+    CREATE TABLE IF NOT EXISTS artists_genres(  
+        genre_id INTEGER REFERENCES genres(genre_id),  
+        artist_id INTEGER REFERENCES artists(artist_id),  
+        CONSTRAINT ag PRIMARY KEY (genre_id, artist_id));  
+
+***
+
