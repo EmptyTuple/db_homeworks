@@ -44,3 +44,19 @@
         release_year INTEGER);  
 
 ***
+
+    CREATE TABLE IF NOT EXISTS artists_albums(  
+        album_id INTEGER REFERENCES albums(album_id),  
+        artist_id INTEGER REFERENCES artists(artist_id),  
+        CONSTRAINT aa PRIMARY KEY (album_id, artist_id));  
+
+***
+
+    CREATE TABLE IF NOT EXISTS tracks(  
+        track_id SERIAL PRIMARY KEY,  
+        album_id INTEGER REFERENCES albums(album_id),  
+        track_name VARCHAR(64),  
+        track_number SMALLINT,  
+        playtime INTERVAL MINUTE TO SECOND);  
+
+***
