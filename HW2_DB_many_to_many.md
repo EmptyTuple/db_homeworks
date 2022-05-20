@@ -90,5 +90,32 @@ Consider this case where I'm trying to model a database for a company:<br>
  ![111 drawio](https://user-images.githubusercontent.com/95244436/169483762-206e86d0-31d0-48f0-bd43-d0834bc9ee13.png)
 
 ### SQL commands to create main relations.
- 
+
+***
+
+	-- Create the deps table. 
+	CREATE TABLE deps (. 
+		dep_id SERIAL PRIMARY KEY,  
+		dep_name VARCHAR(32) NOT NULL,  
+	    	manager_id INTEGER. 
+	    	);  
+
+***
+
+	-- Create the emps table. 
+	CREATE TABLE emps (. 
+		emp_id SERIAL PRIMARY KEY,  
+	    	emp_name VARCHAR(64) NOT NULL,  
+		manager_id INTEGER,  
+	    	department_id INTEGER REFERENCES deps(dep_id). 
+	    	) ;  
+
+***
+
+-- Add recursive foreign key into the emps table
+ALTER TABLE emps
+ADD CONSTRAINT dep_mgr_fk
+	FOREIGN KEY (manager_id)
+    REFERENCES emps (emp_id)
+    ;
  
