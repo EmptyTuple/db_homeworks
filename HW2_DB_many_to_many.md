@@ -114,8 +114,7 @@ Consider this case where I'm trying to model a database for a company:<br>
 
 	-- Add recursive foreign key into the emps table.
 	ALTER TABLE emps
-	ADD CONSTRAINT dep_mgr_fk
-		FOREIGN KEY (manager_id)
+	ADD CONSTRAINT dep_mgr_fk FOREIGN KEY (manager_id)
 	    	REFERENCES emps (emp_id)
 	    	;
 
