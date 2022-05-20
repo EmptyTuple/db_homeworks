@@ -1,10 +1,12 @@
-### ERD for musuc database
+## Task 1. Music database creating.
+
+### ERD for musuc database.
 
 ![merd drawio](https://user-images.githubusercontent.com/95244436/169039402-a54f3e91-0e1e-4eba-949d-68c1392dce03.png)
 
 
 
-### SQL commands to create main relations
+### SQL commands to create main relations.
 
 ***
 
@@ -74,3 +76,15 @@
         CONSTRAINT ct PRIMARY KEY (collection_id, track_id));  
 
 ***
+
+## Task 2: Employees, deparments, managers.
+
+Consider this case where I'm trying to model a database for a company:
+ • Entities: employees, departments, managers.
+ • An employee works in only 1 department while a department may have many Employees working in it.
+ • A manager may manage only 1 department and similarly a department may have only 1 manager.
+ • A manager supervises many employees, but an employee is only supervised by one manager.
+ 
+ ### ERD for the task.
+ 
+ 
