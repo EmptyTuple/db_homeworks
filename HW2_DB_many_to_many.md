@@ -79,11 +79,11 @@
 
 ## Task 2: Employees, deparments, managers.
 
-Consider this case where I'm trying to model a database for a company:
- • Entities: employees, departments, managers.
- • An employee works in only 1 department while a department may have many Employees working in it.
- • A manager may manage only 1 department and similarly a department may have only 1 manager.
- • A manager supervises many employees, but an employee is only supervised by one manager.
+Consider this case where I'm trying to model a database for a company:<br>
+- Entities: employees, departments, managers.
+- An employee works in only 1 department while a department may have many Employees working in it.
+- A manager may manage only 1 department and similarly a department may have only 1 manager.
+- A manager supervises many employees, but an employee is only supervised by one manager.
  
  ### ERD for the task.
  
