@@ -21,7 +21,7 @@ query_longest_track = conn.execute(
     ''').fetchone()
 print(query_longest_track)
 
-# select tracks with playtime great than 3.5 minutes:
+# select tracks with playtime great than 3.5 minutes only:
 query_tracks_by_playtime = conn.execute(
     ''' SELECT track_name FROM tracks
         WHERE playtime >= INTERVAL '210' second;
@@ -35,14 +35,14 @@ query_collections_between = conn.execute(
     ''').fetchall()
 print(query_collections_between)
 
-# select tracks than contain the word "my" in the name:
+# select tracks than contain the word "my" in the name only:
 query_contains_my = conn.execute(
     ''' SELECT track_name FROM tracks
         WHERE track_name LIKE '%%My%%';
     ''').fetchall()
 pprint(query_contains_my)
 
-# select artists with a single word stage name:
+# select artists with a single word stage name only:
 query_single_word_name = conn.execute(
     ''' SELECT first_name, last_name, stage_name FROM artists
         WHERE stage_name NOT LIKE '%% %%';
