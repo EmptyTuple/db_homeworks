@@ -79,7 +79,7 @@ HAVING t.playtime = (SELECT MIN(playtime) FROM tracks)
 ORDER BY ar.stage_name
 ;
 
--- 9. Название альбомов, содержащих наименьшее количество треков
+-- 9. Названия альбомов, содержащих наименьшее количество треков
 SELECT DISTINCT al.album_name
 FROM albums AS al
 LEFT JOIN tracks AS t ON al.album_id = t.album_id
